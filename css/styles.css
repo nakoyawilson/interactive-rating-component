@@ -1,10 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+:root {
+  --font: "Overpass", sans-serif;
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background: var(--very-dark-blue);
+  color: var(--white);
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.hide-section {
+  display: none;
+}
+
+/* Main */
+
+.main {
+  background: var(--dark-blue);
+  width: min(86.67%, 32.5rem);
+  margin: 15.5rem auto;
+  border-radius: 10px;
+}
+
+/* Rating Section */
+
+.ratings-section {
+  padding: 8.5rem 2.4rem 3.2rem;
+}
+
+.heading {
+  position: relative;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.heading::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--white);
+  background-image: url("../images/icon-star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  border-radius: 50%;
+}
+
+.paragraph {
+  line-height: 1.5;
+  margin: 2.4rem auto 3.5rem;
+  color: var(--light-grey);
+}
+
+.ratings-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.rating-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  color: var(--light-grey);
+}
+
+.btn-submit {
+  display: block;
+  margin-top: 2rem;
+  background-color: var(--orange);
+  color: var(--white);
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 28px;
+  padding: 1.6rem;
+}
+
+/* Thank You Section */
+
 /* Footer */
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--orange);
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 530px) {
+  /* Main */
+
+  .main {
+    background: var(--dark-blue);
+    width: 41.5rem;
+    margin: 19.5rem auto 19rem;
+    border-radius: 10px;
+  }
+
+  /* Rating Section */
+
+  .ratings-section {
+    padding: 11.5rem 3.5rem 3.2rem;
+  }
+
+  .heading::before {
+    top: -8rem;
+  }
+
+  .rating-label:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+  }
+
+  .rating-label.active {
+    background-color: var(--medium-grey);
+    color: var(--white);
+  }
+
+  .btn-submit {
+    margin-top: 3rem;
+    padding: 1.6rem;
+  }
+
+  .btn-submit:hover {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);
+  }
+
+  /* Thank You Section */
 }

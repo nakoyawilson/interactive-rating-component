@@ -17,40 +17,70 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <main>
-      <section>
+    <main class="main">
+      <section class="ratings-section" id="ratings">
         <h1 class="heading">How did we do?</h1>
         <p class="paragraph">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <form>
-          <div>
+        <form id="ratings-form">
+          <div class="ratings-wrapper">
             <div>
-              <input type="radio" id="rating-1" name="rating" value="1" />
-              <label for="rating-1">1</label>
+              <input
+                type="radio"
+                id="rating-1"
+                name="rating"
+                value="1"
+                class="visually-hidden ratings-input"
+              />
+              <label for="rating-1" class="rating-label">1</label>
             </div>
             <div>
-              <input type="radio" id="rating-2" name="rating" value="2" />
-              <label for="rating-2">2</label>
+              <input
+                type="radio"
+                id="rating-2"
+                name="rating"
+                value="2"
+                class="visually-hidden ratings-input"
+              />
+              <label for="rating-2" class="rating-label">2</label>
             </div>
             <div>
-              <input type="radio" id="rating-3" name="rating" value="3" />
-              <label for="rating-3">3</label>
+              <input
+                type="radio"
+                id="rating-3"
+                name="rating"
+                value="3"
+                class="visually-hidden ratings-input"
+              />
+              <label for="rating-3" class="rating-label">3</label>
             </div>
             <div>
-              <input type="radio" id="rating-4" name="rating" value="4" />
-              <label for="rating-4">4</label>
+              <input
+                type="radio"
+                id="rating-4"
+                name="rating"
+                value="4"
+                class="visually-hidden ratings-input"
+              />
+              <label for="rating-4" class="rating-label">4</label>
             </div>
             <div>
-              <input type="radio" id="rating-5" name="rating" value="5" />
-              <label for="rating-5">5</label>
+              <input
+                type="radio"
+                id="rating-5"
+                name="rating"
+                value="5"
+                class="visually-hidden ratings-input"
+              />
+              <label for="rating-5" class="rating-label">5</label>
             </div>
           </div>
-          <button>Submit</button>
+          <button id="submit-button" class="btn-submit">Submit</button>
         </form>
       </section>
-      <section>
+      <section class="thank-you-section hide-section" id="thanks">
         <h2>You selected <span id="user-choice"></span> out of 5</h2>
         <h3>Thank you!</h3>
         <p>
