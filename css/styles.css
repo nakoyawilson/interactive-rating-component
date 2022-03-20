@@ -34,7 +34,6 @@ body {
   font-weight: 400;
   background: var(--very-dark-blue);
   color: var(--white);
-  text-align: center;
 }
 
 button {
@@ -88,6 +87,7 @@ svg {
 
 .ratings-section {
   padding: 8rem 2.4rem 3.2rem;
+  text-align: left;
 }
 
 .heading {
@@ -161,6 +161,7 @@ input[type="radio"]:checked + .rating-label {
 
 .thank-you-section {
   padding: 15.4rem 2.4rem 3.7rem;
+  text-align: center;
 }
 
 .section-heading {
