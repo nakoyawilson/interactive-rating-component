@@ -137,7 +137,7 @@ svg {
   letter-spacing: 0.175px;
 }
 
-.rating-label.active {
+input[type="radio"]:checked + .rating-label {
   background-color: var(--medium-grey);
   color: var(--white);
 }
