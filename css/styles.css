@@ -8,6 +8,8 @@
   --medium-grey: hsl(216, 12%, 54%);
   --dark-blue: hsl(213, 19%, 18%);
   --very-dark-blue: hsl(216, 12%, 8%);
+  --black-1: hsl(215, 20%, 17%);
+  --black-2: hsl(215, 24%, 12%);
 }
 
 /* CSS Reset */
@@ -32,12 +34,18 @@ body {
   font-weight: 400;
   background: var(--very-dark-blue);
   color: var(--white);
+  text-align: center;
 }
 
 button {
   background: none;
   border: none;
   font: inherit;
+}
+
+img,
+svg {
+  display: block;
 }
 
 .visually-hidden {
@@ -51,28 +59,41 @@ button {
   width: 1px;
 }
 
+/* Main */
+
+.main {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    var(--black-1) 0%,
+    var(--black-2) 100%
+  );
+  width: min(87.2%, 32.7rem);
+  margin: 15.4rem auto;
+  border-radius: 15px;
+}
+
+/* Shared Styles */
+
 .hide-section {
   display: none;
 }
 
-/* Main */
-
-.main {
-  background: var(--dark-blue);
-  width: min(86.67%, 32.5rem);
-  margin: 15.5rem auto;
-  border-radius: 10px;
+.paragraph {
+  color: var(--light-grey);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
 }
 
 /* Rating Section */
 
 .ratings-section {
-  padding: 8.5rem 2.4rem 3.2rem;
+  padding: 8rem 2.4rem 3.2rem;
 }
 
 .heading {
   position: relative;
   font-size: 2.4rem;
+  line-height: 3rem;
   font-weight: 700;
 }
 
@@ -80,20 +101,18 @@ button {
   content: "";
   width: 4rem;
   height: 4rem;
-  background-color: var(--white);
+  background-color: var(--dark-blue);
   background-image: url("../images/icon-star.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: -6rem;
+  top: -5.6rem;
   left: 0;
   border-radius: 50%;
 }
 
-.paragraph {
-  line-height: 1.5;
-  margin: 2.4rem auto 3.5rem;
-  color: var(--light-grey);
+.ratings-section .paragraph {
+  margin: 1rem auto 2.4rem;
 }
 
 .ratings-wrapper {
@@ -101,39 +120,91 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.6rem;
 }
 
 .rating-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--white);
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: var(--dark-blue);
   border-radius: 50%;
-  color: var(--light-grey);
+  color: var(--medium-grey);
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.175px;
+}
+
+.rating-label.active {
+  background-color: var(--medium-grey);
+  color: var(--white);
 }
 
 .btn-submit {
   display: block;
-  margin-top: 2rem;
+  margin-top: 2.4rem;
   background-color: var(--orange);
   color: var(--white);
   width: 100%;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  border-radius: 28px;
-  padding: 1.6rem;
+  border-radius: 22.5px;
+  padding: 1.2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 1.86667px;
 }
 
 /* Thank You Section */
+
+.thank-you-section {
+  padding: 15.4rem 2.4rem 3.7rem;
+}
+
+.section-heading {
+  width: fit-content;
+  margin-inline: auto;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  padding: 0.5rem 1.2rem;
+  color: var(--orange);
+  background: var(--dark-blue);
+  border-radius: 22.5px;
+  position: relative;
+}
+
+.section-heading::before {
+  content: "";
+  width: 14.4rem;
+  height: 9.6rem;
+  background-image: url("../images/illustration-thank-you.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -12rem;
+  right: 0;
+  left: 0;
+  margin-inline: auto;
+}
+
+.subheading {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  margin: 2.4rem auto 1rem;
+}
+
+.thank-you-section .paragraph {
+  margin: 0 auto;
+}
 
 /* Footer */
 
 .attribution {
   font-size: 1.1rem;
-  text-align: center;
 }
 
 .attribution a {
@@ -147,20 +218,44 @@ button {
   /* Main */
 
   .main {
-    background: var(--dark-blue);
-    width: 41.5rem;
-    margin: 19.5rem auto 19rem;
-    border-radius: 10px;
+    width: 41.2rem;
+    margin: 19.5rem auto 18.9rem;
+    border-radius: 30px;
+  }
+
+  /* Shared Styles */
+
+  .paragraph {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
   }
 
   /* Rating Section */
 
   .ratings-section {
-    padding: 11.5rem 3.5rem 3.2rem;
+    padding: 11rem 3.9rem 3.2rem 3.2rem;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
   }
 
   .heading::before {
-    top: -8rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    top: -7.8rem;
+  }
+
+  .ratings-section .paragraph {
+    margin: 0.7rem auto 2.4rem;
+  }
+
+  .rating-label {
+    width: 5.1rem;
+    height: 5.1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.2px;
   }
 
   .rating-label:hover {
@@ -169,14 +264,12 @@ button {
     color: var(--white);
   }
 
-  .rating-label.active {
-    background-color: var(--medium-grey);
-    color: var(--white);
-  }
-
   .btn-submit {
-    margin-top: 3rem;
-    padding: 1.6rem;
+    margin-top: 3.2rem;
+    padding: 1.1rem;
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+    letter-spacing: 2px;
   }
 
   .btn-submit:hover {
@@ -186,4 +279,26 @@ button {
   }
 
   /* Thank You Section */
+
+  .thank-you-section {
+    padding: 18.5rem 4rem 4.5rem 3.2rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    padding: 0.4rem 1.9rem 0.4rem 2rem;
+  }
+
+  .section-heading::before {
+    width: 16.2rem;
+    height: 10.8rem;
+    top: -14rem;
+  }
+
+  .subheading {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+    margin: 3.2rem auto 0.7rem;
+  }
 }
