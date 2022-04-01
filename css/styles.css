@@ -142,6 +142,10 @@ input[type="radio"]:checked + .rating-label {
   color: var(--white);
 }
 
+input[type="radio"]:focus + .rating-label {
+  outline: 1px solid var(--orange);
+}
+
 .btn-submit {
   display: block;
   margin-top: 2.4rem;
